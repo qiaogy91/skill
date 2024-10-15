@@ -1,0 +1,28 @@
+# Go binary
+/bin/
+
+# Build directory
+/build/
+
+# Vendor directory
+/vendor/
+
+# Test binary, build artifacts
+*.test
+*.out
+
+# Coverage files
+*.cov
+
+# Go module files
+go.sum
+
+# IDE and editor settings
+*.idea/
+*.vscode/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+./ioc/
