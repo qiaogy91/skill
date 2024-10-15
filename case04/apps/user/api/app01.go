@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// Instrumentation libraries capture telemetry at the edges of your systems, such as inbound and outbound HTTP requests, but they don’t capture what’s going on in your application.
 func (h *Handler) Pong(req *restful.Request, rsp *restful.Response) {
 	ctx, span := h.tracer.Start(req.Request.Context(), "CustomSpanPong")
 	defer span.End()
