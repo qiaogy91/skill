@@ -10,4 +10,5 @@ require (
 	go.opentelemetry.io/otel/log v0.6.0 // indirect
 	go.opentelemetry.io/otel/metric v1.30.0 // indirect
 	go.opentelemetry.io/otel/trace v1.30.0 // indirect
+	gorm.io/plugin/opentelemetry v0.1.7 // indirect
 )

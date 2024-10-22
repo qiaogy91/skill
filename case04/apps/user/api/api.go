@@ -30,7 +30,6 @@ func (h *Handler) Init() {
 	ws.Route(ws.GET("").To(h.Pong).
 		Doc("获取用户").
 		Metadata(restfulspec.KeyOpenAPITags, []string{"用户管理"}))
-
 }
 
 func init() {

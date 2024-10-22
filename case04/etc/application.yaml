@@ -1,59 +1,22 @@
 application:
   appName: "case04"
 
-
-http:
-  enable: true
-  trace: true
-  host: 0.0.0.0
-  port: 8080
-  readHeaderTimeout: 30
-  readTimeout: 60
-  writeTimeout: 60
-  idleTimeout: 300
-  maxHeaderSize: "16kb"
-
-cors:
-  enabled: true
-  allowedHeaders: [ "*" ]
-  allowedMethods: [ "*" ]
-  allowOrigins: [ "*" ]
-  allowedDomains: [ ".*" ]
-  exposeHeaders: [ ]
-  allowCookies: false
-  maxAge: 43200
-
 log:
-  trace: true
-  callerDeep: 2
   level: debug
-  filename: "logs/app.log"
-  maxSize: 10
-  maxAge: 30
-  maxBackups: 6
-  LocalTime: true
-  compress: false
-  deep: 3
-
 
 datasource:
-  trace: true
+  otlp: true
   host: "127.0.0.1"
   port: 3306
   database: "cases"
   username: "root"
   password: "redhat"
   debug: false
-
-
-metrics:
-  requestHistogramName: "http_request_duration_histogram"
-  requestHistogramBucket: [ 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ]
-  requestTotalName: "http_request_total"
-
+http:
+  host: "127.0.0.1"
+  port: 8080
+  trace: true
 
 otlp:
-  enabled: true
-  httpEndpoint: "127.0.0.1:4318"
-  grpcEndpoint: "127.0.0.1:4317"
-  insecure: true
+  grpcEndpoint: "10.54.44.78:4317"
+  enableTLS: false
